@@ -19,7 +19,7 @@ class KMP {
         int pos = -1;
         for (int i = 0; i < s.length(); i++) {
             if (pos == np - 1)
-                pos--;
+                pos = pi[pos];
             while (pos != -1 && s.charAt(i) != p.charAt(pos + 1))
                 pos = pi[pos];
             if (s.charAt(i) == p.charAt(pos + 1))
